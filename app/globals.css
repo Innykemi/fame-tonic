@@ -1,20 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #010101;
+  --foreground: #ffffff;
+  --font-primary: var(--font-figtree);
+  --font-secondary: var(--font-urbanist);
+  --color-primary: #10cbe0;
+  --color-secondary: #fc004e;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(252, 0, 78, 1) 0%,
+    rgba(16, 203, 224, 1) 100%
+  );
+  --spacing-11p: -11%; /** -11% **/
+  --spacing-10px: 0.625rem; /** 10px **/
+  --spacing-13px: 0.8125rem; /** 13px **/
+  --spacing-19px: 1.1875rem; /** 19px **/
+  --spacing-22px: 1.375rem; /** 22px **/
+  --spacing-25px: 1.5625rem; /** 25px **/
+  --spacing-29px: 1.375rem; /** 29px **/
+  --spacing-30px: 1.875rem; /** 30px **/
+  --spacing-35px: 2.1875rem; /** 35px **/
+  --spacing-57px: 3.5625rem; /** 57px **/
+
+  --w-173px: 10.82rem; /** 173.12px **/
+  --w-516px: 32.25rem; /** 516px **/
+  --w-313px: 19.5625rem; /** 313px **/
+  --w-1018: 63.625rem; /** 1018px **/
+
+  --h-46px: 2.879375rem; /** 46.07px **/
+  --h-74px: 4.625rem; /** 74px **/
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-primary), var(--font-secondary), sans-serif;
+  --color-primary: #10cbe0;
+  --color-secondary: #fc004e;
+  --color-gray: #ababab;
+  --color-gray-2: #a9a9a9;
+  --color-gradient: linear-gradient(
+    90deg,
+    rgba(252, 0, 78, 1) 0%,
+    rgba(16, 203, 224, 1) 100%
+  );
+  --shadow-button: 2px 2px 10px 0px #00e7f9;
+  --shadow-button-alt: 2px 2px 10px 0px var(--color-secondary);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #010101;
     --foreground: #ededed;
   }
 }
@@ -23,4 +60,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-gradient-custom {
+  background: var(--gradient);
+}
+
+.shadow-text {
+  text-shadow: 0 4px 4px #fc004e;
 }
