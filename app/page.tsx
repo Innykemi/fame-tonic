@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Topbar from "./components/layout/Topbar";
-import Menu from "./components/layout/Menu";
-import LeftContent from "./components/home/LeftContent";
+import Topbar from "../components/layout/Topbar";
+import Menu from "../components/layout/Menu";
+import LeftContent from "../components/home/LeftContent";
 
 export default function Home() {
   return (
